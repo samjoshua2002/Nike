@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import { Link } from 'react-router-dom'; 
 import collectionBackground from 'F:/Github/Tailwind/website/src/assets/images/collection-background.svg';
 import bigShoeImage from 'F:/Github/Tailwind/website/src/assets/images/big-shoe2.png';
 
@@ -9,7 +9,7 @@ const Login = () => {
       className="min-h-screen flex items-center justify-center bg-no-repeat bg-cover bg-center relative"
       style={{ backgroundImage: `url(${collectionBackground})` }}
     >
-      {/* Semi-transparent overlay */}
+    
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       {/* Container for the image and the form */}
