@@ -12,7 +12,7 @@ const Login = () => {
     
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-      {/* Container for the image and the form */}
+      
       <div className="relative z-10 flex w-4/5 max-w-6xl h-[80vh] bg-white rounded-lg shadow-lg overflow-hidden">
 
         {/* Left Side - Image */}
