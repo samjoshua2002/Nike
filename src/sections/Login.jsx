@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'; 
 import collectionBackground from '../assets/images/collection-background.svg';
 import bigShoeImage from '../assets/images/big-shoe2.png';
-import { arrowRight } from "../assets/icons"; // Assuming this is the icon you're using
+import { arrowRight } from "../assets/icons"; 
+
 
 const Button = ({ label, iconurl, onClick, type }) => {
   return (
@@ -38,10 +39,10 @@ const Login = () => {
       console.log("Username:", inputValue);
       console.log("Password:", pwd);
 
-      // Store username in localStorage
+      
       localStorage.setItem("key", inputValue);
 
-      // Navigate to /Nike
+     
       navigate('/Nike');
     }
   };
@@ -56,12 +57,12 @@ const Login = () => {
       className="min-h-screen flex items-center justify-center bg-no-repeat bg-cover bg-center relative"
       style={{ backgroundImage: `url(${collectionBackground})` }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-0"></div>
 
       <div className="relative z-10 flex w-4/5 max-w-6xl h-[80vh] bg-white rounded-lg shadow-lg overflow-hidden">
 
-        {/* Left Side - Image */}
-        <div className="w-1/2 bg-gray-100 flex items-center justify-center">
+        
+        <div className="w-1/2 bg-gray-100 flex items-center justify-center " >
           <img
             src={bigShoeImage}
             alt="Big Shoe"
@@ -121,6 +122,7 @@ const Login = () => {
               <Button
                 label="Clear"
                 onClick={clear}
+                type="button"
               />
             </div>
 
