@@ -44,9 +44,9 @@ const Login = () => {
       
       localStorage.setItem("key", inputValue);
 
-      toast("Wow so easy!");
+      toast("Login Successful!");
 
-      setTimeout(() => navigate('/Nike'), 5000);
+      setTimeout(() => navigate('/Nike'), 2000);
 
       
     }
