@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import collectionBackground from '../assets/images/collection-background.svg';
 import bigShoeImage from '../assets/images/big-shoe2.png';
 import { arrowRight } from "../assets/icons"; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Button = ({ label, iconurl, onClick, type }) => {
@@ -42,10 +44,17 @@ const Login = () => {
       
       localStorage.setItem("key", inputValue);
 
-     
-      navigate('/Nike');
+      toast("Wow so easy!");
+
+      setTimeout(() => navigate('/Nike'), 5000);
+
+      
     }
   };
+
+
+
+ 
 
   const clear = () => {
     setInputValue('');
@@ -70,7 +79,7 @@ const Login = () => {
           />
         </div>
 
-        {/* Right Side - Login Form */}
+        
         <div className="w-1/2 flex flex-col justify-center p-12">
           <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">
             Login
@@ -129,9 +138,11 @@ const Login = () => {
             <div className='text-center mt-2' style={{ color: '#ff4d4d' }}>
               {errMsg ? <p>{errMsg}</p> : null}
             </div>
+      
           </form>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   );
 };
