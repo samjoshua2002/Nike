@@ -61,10 +61,11 @@ const Login = () => {
     >
       <div className="absolute inset-0 bg-black bg-opacity-0"></div>
 
-      <div className="relative z-10 flex flex-col sm:flex-row w-full sm:w-4/5 max-w-6xl h-auto sm:h-[80vh] bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="relative z-10 flex flex-col sm:flex-row w-full sm:w-4/5 max-w-6xl h-screen sm:h-auto bg-white rounded-lg shadow-lg overflow-hidden">
+
 
         {/* Image section */}
-        <div className="w-full sm:w-1/2 bg-gray-100 flex items-center justify-center">
+        <div className="w-full sm:w-1/2 bg-white flex items-center justify-center">
           <img
             src={bigShoeImage}
             alt="Big Shoe"
