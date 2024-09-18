@@ -41,20 +41,13 @@ const Login = () => {
       console.log("Username:", inputValue);
       console.log("Password:", pwd);
 
-      
       localStorage.setItem("key", inputValue);
 
       toast("Login Successful!");
 
       setTimeout(() => navigate('/Nike'), 2000);
-
-      
     }
   };
-
-
-
- 
 
   const clear = () => {
     setInputValue('');
@@ -68,24 +61,24 @@ const Login = () => {
     >
       <div className="absolute inset-0 bg-black bg-opacity-0"></div>
 
-      <div className="relative z-10 flex w-4/5 max-w-6xl h-[80vh] bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="relative z-10 flex flex-col sm:flex-row w-full sm:w-4/5 max-w-6xl h-auto sm:h-[80vh] bg-white rounded-lg shadow-lg overflow-hidden">
 
-        
-        <div className="w-1/2 bg-gray-100 flex items-center justify-center " >
+        {/* Image section */}
+        <div className="w-full sm:w-1/2 bg-gray-100 flex items-center justify-center">
           <img
             src={bigShoeImage}
             alt="Big Shoe"
-            className="object-contain w-full h-full"
+            className="object-contain w-full h-48 sm:h-full"
           />
         </div>
 
-        
-        <div className="w-1/2 flex flex-col justify-center p-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">
+        {/* Login form section */}
+        <div className="w-full sm:w-1/2 flex flex-col justify-center p-8 sm:p-12">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 sm:mb-6 text-center">
             Login
           </h1>
           <form onSubmit={handleSubmit}>
-            <div className="mb-6">
+            <div className="mb-4 sm:mb-6">
               <label
                 htmlFor="username"
                 className="block text-sm font-medium text-gray-700"
@@ -103,7 +96,7 @@ const Login = () => {
               />
             </div>
 
-            <div className="mb-6">
+            <div className="mb-4 sm:mb-6">
               <label
                 htmlFor="password"
                 className="block text-sm font-medium text-gray-700"
@@ -138,7 +131,6 @@ const Login = () => {
             <div className='text-center mt-2' style={{ color: '#ff4d4d' }}>
               {errMsg ? <p>{errMsg}</p> : null}
             </div>
-      
           </form>
         </div>
       </div>
