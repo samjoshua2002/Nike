@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import collectionBackground from 'F:/Github/Tailwind/website/src/assets/images/collection-background.svg';
-import bigShoeImage from 'F:/Github/Tailwind/website/src/assets/images/big-shoe2.png';
+import collectionBackground from '../assets/images/collection-background.svg';
+import bigShoeImage from '../assets/images/big-shoe2.png';
 
 const Login = () => {
   return (
@@ -12,7 +12,6 @@ const Login = () => {
     
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-      
       <div className="relative z-10 flex w-4/5 max-w-6xl h-[80vh] bg-white rounded-lg shadow-lg overflow-hidden">
 
         {/* Left Side - Image */}
